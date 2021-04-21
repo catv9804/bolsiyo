@@ -70,12 +70,22 @@ export class CardsComponent implements OnInit {
   }
   //este metodo se ejectua cuando el usuario selecciona uno de los elementos del dropdown y agrega al parametro q=(parametro de)
   categoriaImagenes (query){
-    if(query){
-      query=this.searchQuery+'&category='+query;
-      return this.imageService.getImages(query).subscribe(
-        data=> this.handleSucces(data),
-        error => this.handleError(error)
-      )
+    if(query){//este if permite que pese a que el usuario ponga primero la categoría no falle en la busqueda
+      if(this.searchQuery){
+        //this.searchQuery=''
+        query=this.searchQuery+'&category='+query;
+        return this.imageService.getImages(query).subscribe(
+          data=> this.handleSucces(data),
+          error => this.handleError(error)
+        )
+      }else{//si es que el input está vacio, es decir no hay nada
+        query='&category='+query;
+        return this.imageService.getImages(query).subscribe(
+          data=> this.handleSucces(data),
+          error => this.handleError(error)
+        )
+      }
+      
     }
     console.log(this.searchQuery)
   }

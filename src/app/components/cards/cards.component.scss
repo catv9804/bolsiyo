@@ -10,13 +10,15 @@
     &:hover{
         width: max-content;
         transform: scale(1.1);
-        cursor:pointer;
+
     }
 }
 #tarjetas{
+    padding-top: 3rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color:#e9ecef;
 }#contenedor-cards{
     padding-top: 1.2rem;
 }
@@ -24,10 +26,17 @@
 
     opacity: 0;
     background-color: rgba(0,0,0,0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     &:hover{
         opacity: 1;
-        background-color: rgba(0, 0, 0, 0.315);
+        background-color: rgba(0, 0, 0, 0.6);
     }
+}
+.jumbotron{
+    padding: 2rem 2rem;
 }
 .imagenes{
     border:0;
@@ -35,10 +44,17 @@
     a{
         color:white
     }
-    h5{
+  
+    
+}
+form{
+    button{
         margin-top: 1rem;
     }
-    
+}
+.dropdown{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 
