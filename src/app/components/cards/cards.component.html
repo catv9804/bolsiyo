@@ -1,0 +1,36 @@
+<form>
+    <label for="buscar">Buscar imagenes</label>
+    <input id="busqueda" type="text" [(ngModel)]="searchQuery" name="buscar" placeholder="Buscar imagenes" (keyup.enter)="buscarImagenes(searchQuery)">
+    <button (click)="buscarImagenes(searchQuery)">Buscar</button>
+
+</form>
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Categorias
+    </button>
+    <!--Se crea el dropdown list y a cada item se le pasa a la función de categoriaImagenes csu respectiva categoría-->
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <button class="dropdown-item" (click)="categoriaImagenes('science')">science</button>
+      <button class="dropdown-item" (click)="categoriaImagenes('educaion')">Education</button>
+      <button class="dropdown-item" (click)="categoriaImagenes('people')">People</button>
+      <button class="dropdown-item" (click)="categoriaImagenes('feelings')">Feelings</button>
+      <button class="dropdown-item" (click)="categoriaImagenes('computer')">Computer</button>
+    </div>
+  </div>
+
+<div *ngIf="images" id="tarjetas">
+    <ng-container *ngFor="let image of images" (deferLoad)="image.show=true">
+        <div class="card overlay" style="width: 18rem;">
+            <button (click)="abrirImagen(image)">
+                <img class="card-img-top" alt="Card image cap" src={{image.previewURL}}>
+            </button>
+            <div class="card-body">
+              <p class="card-text">{{image.tags}}</p>
+            </div>
+          </div>
+    </ng-container>
+    
+</div>
+<div *ngIf="selected">
+    <p id="hola">{{selected.likes}}</p>
+</div>

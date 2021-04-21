@@ -2,8 +2,11 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+//Se establece la url basica y la key para las peticiones
 export const environment = {
-  production: false
+  production: false,
+  PIXABAY_API_KEY:'21241943-68de77e0edfd26a3a92945d98',
+  PIXABAY_API_URL:'https://pixabay.com/api/?key='
 };
 
 /*

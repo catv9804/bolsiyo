@@ -1,0 +1,23 @@
+.card{
+    margin-bottom: 3rem;
+    margin-right: 2rem;
+    transform: all .2s ease-in-out;
+    button{
+        border:0;
+        padding: 0;
+        
+    }
+    img{
+        padding: 0;
+    }
+    &:hover{
+        width: max-content;
+        transform: scale(1.1);
+        cursor:pointer;
+    }
+}
+#tarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
