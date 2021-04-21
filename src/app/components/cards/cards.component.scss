@@ -1,12 +1,9 @@
 .card{
     margin-bottom: 3rem;
-    margin-right: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
     transform: all .2s ease-in-out;
-    button{
-        border:0;
-        padding: 0;
-        
-    }
+    
     img{
         padding: 0;
     }
@@ -20,4 +17,28 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}#contenedor-cards{
+    padding-top: 1.2rem;
 }
+.card-img-overlay{
+
+    opacity: 0;
+    background-color: rgba(0,0,0,0);
+    &:hover{
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.315);
+    }
+}
+.imagenes{
+    border:0;
+    padding: 0;
+    a{
+        color:white
+    }
+    h5{
+        margin-top: 1rem;
+    }
+    
+}
+
+

@@ -80,8 +80,8 @@ export class CardsComponent implements OnInit {
     console.log(this.searchQuery)
   }
   ngOnInit() {
-    this.almacenar$=this.store.pipe(select('almacenar'));
-    console.log(this.almacenar$)
+    //this.almacenar$=this.store.pipe(select('almacenar'));
+    //console.log(this.almacenar$)
     
   }
 
